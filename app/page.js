@@ -1,95 +1,35 @@
 import Image from 'next/image'
-import styles from './page.module.css'
+
+// Components
+import NavBar from './components/NavBar'
+import Layout from './components/Principal'
+
+// Images
+import profile from '../public/rogy.png';
+import AnimatedText from './components/AnimatedText';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className='bg-light w-full min-h-screen font-texts'>
+      <NavBar />
+      <Layout className='lg:pt-0 pt-[60px]'>
+        <div className='lg:flex lg:items-center lg:justify-between w-full h-full pb-3'>
+          <div className='lg:w-1/2 pb-3 flex flex-col items-center self-center'>            
+            <AnimatedText text='Frontend Developer' className={'font-titles lg:!text-[110px] text-[48px] pb-1 lg:pb-5 lg:!text-right'}/>
+            <p className='my-4 font-texts text-sm text-center lg:text-2xl lg:text-center'>
+            Desarrolladora web Frontend autodidacta, apasionada por la tecnología y el aprendizaje. Actualmente, emergiendo en el mundo del desarrollo en busca de retos que me permitan crecer y ampliar mis conocimientos.
+            </p>
+            <div className='flex items-center self-center mt-3 lg:mt-5'>
+            <Link className='flex items-center bg-violeta text-gris p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-gris hover:text-light '
+            href='mailto:cdesousarogymar@gmail.com'>Work with me</Link>
+          </div>
+          </div>
+          <div className='lg:w-1/2'>
+            <Image src={profile} alt='rogy-Pick' className='w-full h-auto' />
+          </div>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      </Layout>
     </main>
   )
 }
