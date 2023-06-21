@@ -2,12 +2,13 @@ import Image from 'next/image'
 
 // Components
 import NavBar from './components/NavBar'
-import Layout from './components/Principal'
+import Layout from './components/Inicio'
 
 // Images
 import profile from '../public/rogy.png';
 import AnimatedText from './components/AnimatedText';
 import Link from 'next/link';
+import Footer from './components/Footer';
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
         <div className='lg:flex lg:items-center lg:justify-between w-full h-full pb-3'>
           <div className='lg:w-1/2 pb-3 flex flex-col items-center self-center'>            
             <AnimatedText text='Frontend Developer' className={'font-titles lg:!text-[110px] text-[48px] pb-1 lg:pb-5 lg:!text-right'}/>
-            <p className='my-4 font-texts text-sm text-center lg:text-2xl lg:text-center'>
+            <p className='my-4 font-texts text-sm text-center lg:text-2xl lg:text-right'>
             Desarrolladora web Frontend autodidacta, apasionada por la tecnología y el aprendizaje. Actualmente, emergiendo en el mundo del desarrollo en busca de retos que me permitan crecer y ampliar mis conocimientos.
             </p>
             <div className='flex items-center self-center mt-3 lg:mt-5'>
@@ -30,6 +31,7 @@ export default function Home() {
           </div>
         </div>
       </Layout>
+      <Footer />
     </main>
   )
 }

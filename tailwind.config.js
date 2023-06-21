@@ -16,7 +16,6 @@ module.exports = {
         claroBlue: '#bbd0ff',
         light: '#f8f9fa',
         dark: '#343a40',
-        rosita: '#ffd6ff',
         gris: '#46494c',
       }
     },
