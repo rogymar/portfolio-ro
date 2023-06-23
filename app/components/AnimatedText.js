@@ -12,7 +12,7 @@ const animated = {
         opacity:1,
         transition:{
             delay:0.2,
-            staggerChildren: 0.20,
+            staggerChildren: 0.05,
         }
     }
 }
@@ -33,8 +33,8 @@ const singleWord = {
 
 const AnimatedText = ({text, className}) => {
     return (
-        <div className='w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden'>
-            <motion.h1 className={`inline-block w-full text-violeta capitalize text-8xl ${className}`}
+        <div className='w-full flex items-center justify-center text-center overflow-hidden'>
+            <motion.h1 className={`inline-block w-full text-gris font-titles capitalize text-5xl ${className}`}
             variants={animated}
             initial='initial'
             animate='animate'>

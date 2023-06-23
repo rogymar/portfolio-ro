@@ -13,10 +13,16 @@ module.exports = {
       },
       colors: {
         violeta: '#C8B6FF',
-        claroBlue: '#bbd0ff',
+        azulito: '#bbd0ff',
         light: '#f8f9fa',
-        dark: '#343a40',
+        ocuro: '##2F3240',
         gris: '#46494c',
+        naranja: '#F28157',
+        menta: '#BAD9BF',
+        lila: '#ABA9D9',
+      },
+      animation: {
+        'spin-slow': 'spin 10s linear infinite',
       }
     },
   },

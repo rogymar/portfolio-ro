@@ -1,17 +1,17 @@
 import '../app/styles/globals.css'
 import { Staatliches, Raleway } from 'next/font/google'
-import NavBar from './components/NavBar'
-import Home from './page'
-import Footer from './components/Footer'
 
-const staatliches = Staatliches({ 
+import NavBar from './components/NavBar'
+import Footer from './components/Footer';
+
+const staatliches = Staatliches({
   subsets: ['latin'],
   weight: ['400'],
   variable: '--font-title',
   display: 'swap',
 })
 
-const raleway = Raleway({ 
+const raleway = Raleway({
   weight: ['400', '300'],
   subsets: ['latin'],
   variable: '--font-text',
@@ -26,7 +26,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${staatliches.variable} ${raleway.variable}`}>
-      <body className='bg-light w-full min-h-screen font-texts'>{children}
+      <body className='bg-light'>{children}
       </body>
     </html>
   )
