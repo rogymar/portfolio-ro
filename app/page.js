@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Image from 'next/image'
-import Link from 'next/link';
 
 // Animation
 import { motion } from 'framer-motion';
@@ -13,15 +12,15 @@ import AnimatedText from './components/AnimatedText';
 import RotatingText from './components/RotatingText';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import SkillsView from './components/SkillsView';
+import ProjectsView from './components/ProjectsView';
+
 
 // Images
 import profile from '../public/rogy.png';
 import iconGithub from '../public/github.svg';
 import iconLinkedin from '../public/linkedin.svg';
-import landing from '../public/landing.jpeg';
-import dataMovies from '../public/datamovies.jpeg';
-import SkillsViewsCard from './components/SkillsView';
-import DevViewCard from './components/DevelopmentVie';
+
 
 export default function Home() {
   return (
@@ -43,7 +42,7 @@ export default function Home() {
               whileInView={{ opacity: 1 }}
 
               href='/about'>
-              <Image src={profile} alt='Rogy-profile-pick' className='md:w-full md:h-auto rounded-full shadow-xl shadow-gris' /></motion.a>
+              <Image src={profile} alt='Rogy-profile-pick' className='md:w-full md:h-auto rounded-full shadow-xl shadow-gris hover:opacity-80' /></motion.a>
           </div>
           <div className='md:col-span-1 md:flex-col flex justify-around'>
             <motion.a href='https://github.com/rogymar'
@@ -60,25 +59,22 @@ export default function Home() {
             </motion.a>
           </div>
         </section>
-        <div className='bg-azulito w-full py-8 px-10 md:py-12 md:px-14 lg:py-16 lg:px-20'>
-          <div>
-            <h2 className='text-light text-3xl md:text-5xl lg:text-9xl '>Skills</h2>
-          </div>
-          <div>
-            <SkillsViewsCard 
-              className={'w-full h-30'}
-              src={''}
-              alt=''
-              name={''}  
-            />
-          </div>
+        <section className='bg-azulito w-full py-8 px-10 md:py-12 md:px-14 lg:py-16 lg:px-20'>
+          <h2 className='text-light text-4xl pb-6 md:text-5xl lg:text-9xl lg:pb-0'>Development Projects</h2>
+          <ProjectsView />
+        </section>
+        <div className='w-full py-8 px-10 text-right text-gris flex flex-row-reverse items-center justify-between gap-2 md:py-12 md:px-14 lg:py-16 lg:px-20 lg:gap-5'>
+          <h2 className='w-1/2 text-4xl md:text-5xl lg:text-9xl'>Conozca más...</h2>
+            <p className='w-1/2 text-sm md:text-xl lg:text-3xl'>Visita la página de skills, encontrarás un poco del proceso de estudio. También, visita la página de proyectos, allí encontrarás enlaces para ver los proyectos en código y en demo.</p>
         </div>
-        <article className='bg-menta w-full py-8 px-10 md:py-12 md:px-14 lg:py-16 lg:px-20'>
-          <h2 className='text-light text-3xl md:text-5xl lg:text-9xl '>Development Projects</h2>
-          <div className='flex justify-around items-center pt-10'>
-            <DevViewCard />
-          </div>
-        </article>
+        <section className='bg-violeta w-full py-8 px-10 md:py-12 md:px-14 lg:py-16 lg:px-20'>
+          <h2 className='text-light text-4xl pb-6 md:text-5xl lg:text-9xl lg:pb-0'>Skills</h2>
+          <SkillsView />
+        </section>
+        <div className='w-full py-8 px-10 text-right text-gris flex flex-row-reverse items-center justify-between gap-2 md:py-12 md:px-14 lg:py-16 lg:px-20 lg:gap-5'>
+          <h2 className='w-1/2 text-4xl md:text-5xl lg:text-9xl'>Thanks for watching</h2>
+            <p className='w-1/2 text-sm md:text-xl lg:text-[28px]'>Todo en la vida es un proceso de aprendizaje constante. Así que nunca pares de aprender, siempre hay cosas nuevas aguardándote. (❁´◡`❁)</p>
+        </div>
       </Layout>
       <RotatingText />
       <Footer />

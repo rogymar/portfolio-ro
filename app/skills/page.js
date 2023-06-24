@@ -41,7 +41,8 @@ const skills = () => {
             <NavBar />
             <main className='w-full'>
                 <Layout className='pt-7 lg:pt-14'>
-                <AnimatedText className='text-[41px] pb-3 !text-gris lg:text-[70px] lg:pb-4' text='Tools make it all easier!' />
+                <AnimatedText className='text-[41px] pb-3 !text-gris lg:text-[70px] lg:pb-4' text='Skills&nbsp; and&nbsp; tools' />
+                <h2>Tools make it all easier!</h2>
                     <div ref={ref} className='w-h h-auto mx-auto relative grid grid-cols-2'>
 
                         <motion.div

@@ -16,8 +16,9 @@ const projects = () => {
             <NavBar />
             <main className='w-full'>
                 <Layout className='pt-16'>
-                    <AnimatedText text='Some of my work..' />
-                    <section>
+                    <AnimatedText text='Development&nbsp; projects&nbsp; to&nbsp; date' />
+                    <h2>Some of my work..</h2>
+                    <section className='w-full py-8 px-10 md:py-12 md:px-14 lg:py-16 lg:px-20'>
                         <div>
                             <img />
                             <description />

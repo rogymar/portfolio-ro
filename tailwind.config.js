@@ -15,7 +15,7 @@ module.exports = {
         violeta: '#C8B6FF',
         azulito: '#bbd0ff',
         light: '#f8f9fa',
-        ocuro: '##2F3240',
+        oscuro: '##2F3240',
         gris: '#46494c',
         naranja: '#F28157',
         menta: '#BAD9BF',

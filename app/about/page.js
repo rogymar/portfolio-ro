@@ -2,6 +2,8 @@
 
 import Head from "next/head";
 import React, { useEffect, useRef } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 // Components
 import Layout from "../components/Inicio";
@@ -13,8 +15,8 @@ import Footer from "../components/Footer";
 import { useInView, useMotionValue, useSpring, motion } from "framer-motion";
 
 // images
-import profile from '../../public/rogy.png'
-import Image from "next/image";
+import profile from '../../public/rogy.png';
+import wattpad from '../../public/wattpad.svg';
 
 // Funcion que mostrará una animación de conteo en los numeros hasta llegar al valor esperado...
 const LetterAnim = ({ value }) => {
@@ -41,6 +43,35 @@ const LetterAnim = ({ value }) => {
     return <span ref={ref}></span>
 }
 
+
+// Función para no tener que estar estilando cada etiqueta por separado.
+const CustomP = ({ text }) => {
+    return (
+        <div className='flex flex-col items-start py-1.5 text-sm md:text-lg'>
+            <p>{text}</p>
+        </div>
+    )
+}
+
+const CustomResum = ({ value, premise }) => {
+    return (
+        <div className='text-center lg:pb-10'>
+            <span className='text-violeta font-titles text-4xl md:text-5xl lg:text-8xl'>
+                <LetterAnim value={value} /> ✔</span>
+            <h3 className='font-texts font-semibold text-xs md:text-base lg:text-xl'>{premise}</h3>
+        </div>
+    )
+}
+
+const CustomHobbies = ({ hobbie, icon }) => {
+    return (
+        <div className='text-center'>
+            <p className='text-2xl md:text-[40px] lg:text-[50px] md:py-3 lg:py-[18px]'>{icon}</p>
+            <p className='text-xs md:text-base font-semibold'>{hobbie}</p>
+        </div>
+    )
+}
+
 const about = () => {
     return (
         <>
@@ -49,41 +80,51 @@ const about = () => {
                 <meta name='description' content='description about RogyChririnos' />
             </Head>
             <NavBar />
-            <main className='w-full text-gris'>
-                <Layout className='pt-7 lg:pt-14'>
-                    <AnimatedText className='text-[40px] pb-3 lg:text-[65px] lg:pb-4' text='We never stop learning!' />
-                    <div className='grid w-full lg:grid-cols-8 grid-cols-1 lg:gap-9 gap-5 mb-10 items-center justify-center'>
-                        <motion.div initial={{ opacity: 0.6 }}
-                            whileHover={{
-                                scale: 1.2,
-                                transition: { duration: 1 },
-                            }}
-                            whileTap={{ scale: 0.9 }}
-                            whileInView={{ opacity: 1 }}
-                            className='lg:col-span-3 relative rounded-3xl border-4 border-solid border-gris bg-light'>
-                            <Image src={profile} alt='Rogy-profile-pick' className='w-full rounded-2xl shadow-xl shadow-gris' />
-                        </motion.div>
-                    </div>
-                    <div className='lg:col-span-4 lg:items-start lg:justify-start'>
-                        <h2 className='my-2 lg:my-4 text-lg lg:text-3xl text-violeta font-titles'>Biography</h2>
-                        <p className='my-3 lg:my-4 text-sm lg:text-lg text-start'>Hi, I'm Rogymar Chirinos, frontend web developer, passionate about knowledge and creation of diverse functional digital products. I am always learning or understanding something new and innovative in order to contribute in projects.</p>
-                        <p className='my-3 lg:my-4 text-sm lg:text-lg text-start'>I firmly believe that technology contributes positively to evolution of humanity, and web development is more than just making pretty things, it is always about finding the best solutions to a problem.</p>
-                        <p className='my-3 lg:my-4 text-sm lg:text-lg text-start'>I started my studies in a self-taught way, and I have received knowledge from more experienced developers. I have studied hard to acquire the necessary knowledge that will allow me to emerge in the world of development.  Also, in my free time I dedicate myself to develop my artistic skills (drawing, sculpture and weaving), as I firmly believe that art helps to find thousands of ways to face different challenges.</p>
-                    </div>
-                    <div className='lg:col-span-1 lg:flex lg:items-end lg:justify-between'>
-                        <div className='lg:flex lg:flex-col lg:items-end lg:justify-center'>
-                            <span className='lg:inline-block text-3xl lg:text-7xl font-bold text-claroBlue font-titles'>
-                                <LetterAnim value={10} />
-                                +</span>
-                            <h2 className='text-sm lg:text-xl font-semibold text-gris lg:text-end lg:mb-14 mb-5 pt-1'>Projects Individuals</h2>
-                            <span className='lg:inline-block text-3xl lg:text-7xl font-bold text-claroBlue font-titles'>
-                                <LetterAnim value={10} />
-                                +</span>
-                            <h2 className='text-sm lg:text-xl font-semibold text-gris lg:text-end lg:mb-14 mb-5 pt-1 '>Languages | Frameworks | Libraries</h2>
-                            <span className='inline-block text-3xl lg:text-7xl font-bold text-claroBlue font-titles'>March</span>
-                            <h2 className='text-sm lg:text-xl font-semibold text-gris lg:text-end pt-1'>Start of studies | 2023</h2>
-                        </div>
-                    </div>
+            <main className='bg-light w-full'>
+                <Layout>
+                    <article className='w-full px-10 pt-8 lg:pt-5 md:px-14 lg:px-20 text-gris'>
+                        <section className='flex flex-col items-center justify-center pb-5 md:gap-2 md:pb-10'>
+                            <AnimatedText className='text-[28px] pb-2 md:text-[40px] lg:pb-3 lg:text-[80px]' text='About&nbsp; Rogymar&nbsp; as&nbsp; a&nbsp; developer' />
+                            <h2 className='md:text-[35px] lg:text-6xl text-violeta text-xl'>We never stop learning!</h2>
+                        </section>
+                        <section className='w-full flex flex-col items-center gap-3 pb-6 lg:grid lg:grid-cols-8 lg:gap-8 lg:pb-10 '>
+                            <div className='flex flex-col items-center justify-center py-2 lg:col-span-3 lg:gap-3 lg:pb-0'>
+                                <motion.div initial={{ opacity: 0.6 }}
+                                    whileInView={{ opacity: 1 }}
+                                    className=' border-4 border-gris rounded-full'>
+                                    <Image src={profile} alt='Rogy-profile-pick' className='w-full h-auto rounded-full shadow-xl shadow-gris' />
+                                </motion.div>
+                                <p className='!text-oscuro font-semibold text-xs py-3 md:py-5 md:text-sm lg:py-0'>Esta foto personal fué mejorada con IA 🤫</p>
+                            </div>
+                            <div className='gap-2 md:pb-3 lg:col-span-3 lg:gap-0 lg:pb-0'>
+                                <h2 className='text-azulito text-3xl md:text-4xl'>Biography</h2>
+                                <CustomP text='🙋🏻‍♀️ Un saludo para ti, que estás leyendo. ' />
+                                <CustomP text='Me llamo Rogymar Chirinos, soy Frontend web developer, cuyo principal talento es: aprender lo más rápido posible. Fan de la creación digital. Busco aprender constantemente tanto del mundo del desarrollo como del artístico ya que son complementos indispensables para contribuir en este futuro digital.' />
+                                <CustomP text='Comencé a estudiar de forma autodidacta, viendo vídeos y haciendo cursos virtuales, con los cuales pude emprender el camino hacia el código. En estos laboriosos 4 - 5, meses he recibido apoyo de desarrolladores más experimentados, gracias a ellos pude nutrir mi información.' />
+                                <CustomP text='Pienso que la tecnología contribuye positivamente en la evolución de la humanidad, por tal razón es tan diversa y compleja, así como el desarrollo web, que es más que meramente contruir cosas bonitas: se trata siempre de encontrar las mejores soluciones a uno o varios problemas.' />
+                            </div>
+                            <div className='grid grid-cols-3 gap-2 lg:col-span-2 lg:flex lg:flex-col items-center justify-center py-2 md:py-10 lg:py-0'>
+                                <CustomResum value={10} premise='Personal Projects | Practices' />
+                                <CustomResum value={10} premise='Languages | Frameworks | Libraries' />
+                                <div className='text-center'>
+                                    <p className='text-violeta  font-titles text-4xl md:text-5xl lg:text-8xl'>Feb</p>
+                                    <h3 className='font-texts text-xs md:text-base font-semibold lg:text-xl'>Start of learning, formally | 2023</h3>
+                                </div>
+                            </div>
+                        </section>
+                        <section className='w-full flex px-10 pb-10 md:px-14 lg:px-20 lg:gap-8 items-center justify-center'>
+                            <h2 className='text-azulito text-3xl md:text-4xl lg:text-5xl'>Hobbies</h2>
+                            <div className='grid grid-cols-2 gap-4 pl-10 items-center justify-between text-center md:flex'>
+                                <Link href='https://www.wattpad.com/user/ChiDsou' >
+                                    <Image src={wattpad} alt='wattpad-icon' className='h-8 w-8 md:h-16 md:w-[70px] lg:w-20 lg:h-[70px] self-center' />
+                                    <p className='text-xs md:text-base font-semibold'>Escritura</p>
+                                </Link>
+                                <CustomHobbies icon='🎨' hobbie='Dibujo' />
+                                <CustomHobbies icon='🧸' hobbie='Escultura' />
+                                <CustomHobbies icon='💻' hobbie='Development' />
+                            </div>
+                        </section>
+                    </article>
                 </Layout>
             </main >
             <Footer />
