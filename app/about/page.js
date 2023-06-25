@@ -16,7 +16,7 @@ import { useInView, useMotionValue, useSpring, motion } from "framer-motion";
 
 // images
 import profile from '../../public/rogy.png';
-import wattpad from '../../public/wattpad.svg';
+import wattpad from '../../public/icons/wattpad.svg';
 
 // Funcion que mostrará una animación de conteo en los numeros hasta llegar al valor esperado...
 const LetterAnim = ({ value }) => {
@@ -82,19 +82,19 @@ const about = () => {
             <NavBar />
             <main className='bg-light w-full'>
                 <Layout>
-                    <article className='w-full px-10 pt-8 lg:pt-5 md:px-14 lg:px-20 text-gris'>
+                    <article className='w-full px-10 py-8 lg:pt-5 md:px-14 lg:px-20 text-gris'>
                         <section className='flex flex-col items-center justify-center pb-5 md:gap-2 md:pb-10'>
                             <AnimatedText className='text-[28px] pb-2 md:text-[40px] lg:pb-3 lg:text-[80px]' text='About&nbsp; Rogymar&nbsp; as&nbsp; a&nbsp; developer' />
                             <h2 className='md:text-[35px] lg:text-6xl text-violeta text-xl'>We never stop learning!</h2>
                         </section>
                         <section className='w-full flex flex-col items-center gap-3 pb-6 lg:grid lg:grid-cols-8 lg:gap-8 lg:pb-10 '>
                             <div className='flex flex-col items-center justify-center py-2 lg:col-span-3 lg:gap-3 lg:pb-0'>
-                                <motion.div initial={{ opacity: 0.6 }}
+                                <motion.figure initial={{ opacity: 0.6 }}
                                     whileInView={{ opacity: 1 }}
                                     className=' border-4 border-gris rounded-full'>
                                     <Image src={profile} alt='Rogy-profile-pick' className='w-full h-auto rounded-full shadow-xl shadow-gris' />
-                                </motion.div>
-                                <p className='!text-oscuro font-semibold text-xs py-3 md:py-5 md:text-sm lg:py-0'>Esta foto personal fué mejorada con IA 🤫</p>
+                                </motion.figure>
+                                <figcaption className='!text-oscuro font-semibold text-xs py-3 md:py-5 md:text-sm lg:py-0'>Esta foto personal fué mejorada con IA 🤫</figcaption>
                             </div>
                             <div className='gap-2 md:pb-3 lg:col-span-3 lg:gap-0 lg:pb-0'>
                                 <h2 className='text-azulito text-3xl md:text-4xl'>Biography</h2>

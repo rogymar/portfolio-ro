@@ -17,9 +17,6 @@ module.exports = {
         light: '#f8f9fa',
         oscuro: '##2F3240',
         gris: '#46494c',
-        naranja: '#F28157',
-        menta: '#BAD9BF',
-        lila: '#ABA9D9',
       },
       animation: {
         'spin-slow': 'spin 10s linear infinite',

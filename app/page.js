@@ -18,8 +18,8 @@ import ProjectsView from './components/ProjectsView';
 
 // Images
 import profile from '../public/rogy.png';
-import iconGithub from '../public/github.svg';
-import iconLinkedin from '../public/linkedin.svg';
+import iconGithub from '../public/icons/github.svg';
+import iconLinkedin from '../public/icons/linkedin.svg';
 
 
 export default function Home() {
@@ -45,13 +45,13 @@ export default function Home() {
               <Image src={profile} alt='Rogy-profile-pick' className='md:w-full md:h-auto rounded-full shadow-xl shadow-gris hover:opacity-80' /></motion.a>
           </div>
           <div className='md:col-span-1 md:flex-col flex justify-around'>
-            <motion.a href='https://github.com/rogymar'
+            <motion.a href='https://github.com/rogymar' target='_blank'
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.9 }}
             >
               <Image src={iconGithub} alt="icon-github" className='w-10 h-10 md:w-12 md:h-12 md:py-1' />
             </motion.a>
-            <motion.a href='https://www.linkedin.com/in/rogymarchirinosfront/'
+            <motion.a href='https://www.linkedin.com/in/rogymarchirinosfront/' target='_blank'
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -65,7 +65,7 @@ export default function Home() {
         </section>
         <div className='w-full py-8 px-10 text-right text-gris flex flex-row-reverse items-center justify-between gap-2 md:py-12 md:px-14 lg:py-16 lg:px-20 lg:gap-5'>
           <h2 className='w-1/2 text-4xl md:text-5xl lg:text-9xl'>Conozca más...</h2>
-            <p className='w-1/2 text-sm md:text-xl lg:text-3xl'>Visita la página de skills, encontrarás un poco del proceso de estudio. También, visita la página de proyectos, allí encontrarás enlaces para ver los proyectos en código y en demo.</p>
+          <p className='w-1/2 text-sm md:text-xl lg:text-3xl'>Visita la página de skills, encontrarás un poco del proceso de estudio. También, visita la página de proyectos, allí encontrarás enlaces para ver los proyectos en código y en demo.</p>
         </div>
         <section className='bg-violeta w-full py-8 px-10 md:py-12 md:px-14 lg:py-16 lg:px-20'>
           <h2 className='text-light text-4xl pb-6 md:text-5xl lg:text-9xl lg:pb-0'>Skills</h2>
@@ -73,7 +73,7 @@ export default function Home() {
         </section>
         <div className='w-full py-8 px-10 text-right text-gris flex flex-row-reverse items-center justify-between gap-2 md:py-12 md:px-14 lg:py-16 lg:px-20 lg:gap-5'>
           <h2 className='w-1/2 text-4xl md:text-5xl lg:text-9xl'>Thanks for watching</h2>
-            <p className='w-1/2 text-sm md:text-xl lg:text-[28px]'>Todo en la vida es un proceso de aprendizaje constante. Así que nunca pares de aprender, siempre hay cosas nuevas aguardándote. (❁´◡`❁)</p>
+          <p className='w-1/2 text-sm md:text-xl lg:text-[28px]'>Todo en la vida es un proceso de aprendizaje constante. Así que nunca pares de aprender, siempre hay cosas nuevas aguardándote. (❁´◡`❁)</p>
         </div>
       </Layout>
       <RotatingText />
