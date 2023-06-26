@@ -23,9 +23,9 @@ const SViewsCard = ({ name, className, icon, iconName, }) => {
             whileInView={{ x: 0, transition: { duration: 0.5, ease: 'easeInOut' } }}
             viewport={{ once: true }}
             className={`w-ful flex flex-col items-center justify-center gap-2 w-full pb-5 md:pb-8 md:px-5 lg:gap-1 ${className}`}>
-            <p className='text-gris font-bold text-sm lg:text-lg'>{name}</p>
+            <p className='font-bold text-sm lg:text-lg'>{name}</p>
             <Image
-                src={icon} alt={iconName} className='rounded-2xl shadow-xl shadow-gris bg-light bg-opacity-30 p-3 h-10 w-10 md:h-20 md:w-20 lg:h-32 lg:w-32' />
+                src={icon} alt={iconName} className='rounded-2xl shadow-xl shadow-gris bg-white bg-opacity-30 p-3 h-16 w-16 md:h-20 md:w-20 lg:h-32 lg:w-32 dark:shadow-green-400 dark:bg-opacity-20' />
         </motion.article>
     )
 }
@@ -77,7 +77,7 @@ const SkillsView = () => {
                     iconName='responsive-logo' />
             </div>
             <Link
-                className='bg-light rounded-md text-center font-titles text-gris font-semibold text-base md:text-xl lg:text-3xl lg:p-3 bg-opacity-95 border-2 border-gris hover:text-light hover:bg-gris hover:translate-y-2 transition duration-300'
+                className='bg-light rounded-md text-center font-titles font-semibold text-base mt-5 md:mt-8 md:text-xl lg:mt-6 lg:text-3xl lg:p-3 bg-opacity-95 border-2 border-gris hover:text-light hover:bg-gris hover:translate-y-2 transition duration-300 dark:border-none dark:bg-transparent dark:shadow-lg dark:shadow-green-400 dark:hover:bg-light dark:hover:shadow-none dark:hover:text-green-400'
                 href='/skills' >More about skills</Link>
         </div >
 

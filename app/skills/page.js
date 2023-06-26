@@ -24,14 +24,18 @@ import nextLogo from '../../public/icons/next-light.svg';
 
 const SkillsBox = ({ tool, fact, date, icon, name }) => {
     return (
-        <li className='w-full p-10 flex items-center justify-center flex-col shadow-xl shadow-gris rounded-3xl mb-5 lg:flex-row lg:mb-5 lg:gap-8'>
-            <Image src={icon} alt={name} className='w-full h-24 md:h-32 lg:h-40 lg:w-40' />
+        <motion.li
+        initial={{y:200}}
+        whileInView={{y:0, transition:{duration:0.5, ease:'easeInOut'} }}
+        viewport={{once: true}}
+        className='w-full p-10 flex items-center justify-center flex-col shadow-xl shadow-gris rounded-3xl mb-6 lg:flex-row lg:mb-8 lg:gap-8 dark:shadow-green-400 dark:bg-white dark:bg-opacity-20'>
+            <Image src={icon} alt={name} className='w-full h-24 md:h-32 lg:h-40 lg:w-40 dark:bg-darkLight dark:rounded-full dark:p-4' />
             <div className='w-full text-center lg:text-left'>
                 <h2 className='pt-3 text-3xl md:pt-4 md:text-4xl lg:text-5xl lg:pt-2'>{tool}</h2>
-                <span className='text-azulito font-bold text-lg md:text-xl lg:text-lg'>{date}</span>
+                <span className='text-azulito font-bold text-lg md:text-xl lg:text-lg dark:text-light'>{date}</span>
                 <p className='py-3 text-sm md:text-lg lg:text-base lg:py-4'>{fact}</p>
             </div>
-        </li>
+        </motion.li>
     )
 }
 
@@ -44,19 +48,15 @@ const skills = () => {
                 <meta name='description' content='skills description of RogyChririnos' />
             </Head>
             <NavBar />
-            <main className='bg-light w-full'>
+            <main className='w-full'>
                 <Layout>
-                    <article className='w-full px-10 pt-8 lg:pt-5 md:px-14 lg:px-20 text-gris'>
+                    <article className='w-full px-10 pt-8 lg:pt-5 md:px-14 lg:px-20'>
                         <section className='flex flex-col items-center justify-center pb-5 md:gap-2 md:pb-10'>
                             <AnimatedText className='text-[28px] pb-2 md:text-[40px] lg:pb-3 lg:text-[80px]' text='Skills&nbsp; And&nbsp; Tools&nbsp;' />
-                            <h2 className='md:text-[35px] lg:text-6xl text-violeta text-xl'>Tools make it all easier!</h2>
+                            <h2 className='md:text-[35px] lg:text-6xl text-violeta text-xl dark:text-green-400'>Tools make it all easier!</h2>
                         </section>
                         <section className='w-full lg:pt-6 pb-8'>
-                            <motion.ul
-                                initial={{ y: 400 }}
-                                whileInView={{ y: 0, transition: { duration: 0.5, ease: 'easeInOut' } }}
-                                viewport={{ once: true }}
-                            >
+                            <ul>
                                 <SkillsBox
                                     tool='HTML' date='2018' fact='Fué uno de los primeros lenguajes que conocí, mientras me encontraba digitalizando ebooks y tenía que arreglar ciertas cosas de los libros en Sigil, por lo que obligatoriamente tenía que aprender a entender lo que estaba viendo, aunque al principio parecían caracteres de otro planeta. 🙃' icon={htmlLogo} name='html-logo'
                                 />
@@ -90,7 +90,7 @@ const skills = () => {
                                 <SkillsBox
                                     tool='TailwindCss' date='2023' fact='Casi de la mano con TypeScript y NextJs, ya que me encontraba conociendolos a través de la construcción de una aplicación mientras me encontraba haciendo un curso online. 😄' icon={tailLogo} name='tailwind-logo'
                                 />
-                            </motion.ul>
+                            </ul>
                         </section>
                     </article>
                 </Layout>

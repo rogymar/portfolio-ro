@@ -16,19 +16,22 @@ import landing from '../../public/landing.jpeg';
 import datamovies from '../../public/datamovies.jpeg';
 import noImage from '../../public/image.png';
 import tetris from '../../public/tetris.jpeg';
+import { motion } from "framer-motion";
+
+const FramerImage = motion(Image);
 
 const ProjectsCard = ({ link, title, description, lenguajes, img, name, demo }) => {
     return (
-        <article className='w-full flex flex-col  items-center justify-center text-center p-8 mb-3 rounded-2xl bg-white shadow-lg shadow-gris md:p-12 lg:flex-wrap lg:p-10 lg:gap-6 lg:h-[450px] lg:text-right'>
+        <article className='w-full flex flex-col  items-center justify-center text-center p-8 mb-3 rounded-2xl bg-white shadow-lg shadow-gris md:p-12 lg:flex-wrap lg:p-10 lg:gap-6 lg:h-[450px] lg:text-right dark:bg-transparent dark:shadow-green-400 dark:shadow-xl dark:text-light dark:bg-white dark:bg-opacity-20'>
             <div className='w-full flex flex-col items-center py-3 gap-3 justify-between lg:items-end lg:object-contain lg:w-1/2'>
-                <h2 className='text-gris text-3xl lg:text-5xl'>{title}</h2>
+                <h2 className='text-3xl lg:text-5xl'>{title}</h2>
                 <p className='text-sm md:text-sm lg:text-[15px]'>{description}</p>
                 <p className='font-semibold pb-4 text-xs lg:pb-3 lg:text-[13px]'>{lenguajes}</p>
                 <div className='w-full flex items-center justify-center gap-3 lg:gap-5'>
                     <Link href={link} target='_blank' className='hover:translate-y-2 hover:opacity-50 transition duration-300'>
-                        <Image src={github} alt='github-icon' className='w-9 h-9 lg:w-[45px] lg:[45px]' />
+                        <Image src={github} alt='github-icon' className='w-9 h-9 lg:w-[45px] lg:[45px] dark:bg-darkLight dark:p-2 dark:rounded-xl' />
                     </Link>
-                    <Link href={demo} target='_blank' className='flex gap-2 items-center justify-between bg-gris text-light font-semibold p-2 rounded-xl hover:bg-gradient-to-br from-violeta to-azulito hover:text-gris hover:translate-y-2  hover:opacity-80 transition duration-300'>
+                    <Link href={demo} target='_blank' className='flex gap-2 items-center justify-between bg-gris text-light font-semibold p-2 rounded-xl hover:bg-gradient-to-br from-violeta to-azulito hover:text-gris hover:translate-y-2  hover:opacity-80 transition duration-300 dark:bg-darkLight dark:hover:bg-green-400 dark:text-gris'>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 lg:w-6 lg:h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
                         </svg>
@@ -36,8 +39,11 @@ const ProjectsCard = ({ link, title, description, lenguajes, img, name, demo }) 
                     </Link>
                 </div>
             </div>
-            <Link href={demo} target='_blank' className='cursor-pointer p-5 w-full lg:p-3 rounded-2xl lg:w-1/2 transition duration-200 ease-in-out hover:opacity-40 hover:bg-gradient-to-t from-violeta to-azulito'>
-                <Image src={img} alt={name} className='w-full h-auto lg:h-96 lg:object-scale-down' />
+            <Link href={demo} target='_blank' className='cursor-pointer p-5 w-full lg:p-3 rounded-2xl lg:w-1/2 transition duration-200 ease-in-out hover:bg-gradient-to-t from-violeta to-azulito'>
+                <FramerImage 
+                whileHover={{scale:1.05}}
+                transition={{duration:0.2}}
+                src={img} alt={name} className='w-full h-auto lg:h-96 lg:object-scale-down' />
             </Link>
         </article >
     )
@@ -51,12 +57,12 @@ const projects = () => {
                 <meta name='description' content='projects description of RogyChririnos' />
             </Head>
             <NavBar />
-            <main className='bg-light w-full'>
+            <main className='w-full'>
                 <Layout>
-                    <section className='w-full px-10 py-8 lg:pt-5 md:px-14 lg:px-20 text-gris'>
+                    <section className='w-full px-10 py-8 lg:pt-5 md:px-14 lg:px-20'>
                         <article className='flex flex-col items-center justify-center pb-5 md:gap-2 md:pb-10'>
                             <AnimatedText className='text-[25px] pb-2 md:text-[40px] lg:pb-3 lg:text-[80px]' text='Development&nbsp; Projects&nbsp; To&nbsp; Date' />
-                            <h2 className='text-2xl md:text-[35px] lg:text-6xl text-violeta'>Some of my work!</h2>
+                            <h2 className='text-2xl md:text-[35px] lg:text-6xl text-violeta dark:text-green-400'>Some of my work!</h2>
                         </article>
                         <section className='w-full flex flex-col items-center gap-3 pb-6 lg:grid lg:grid-cols-2 lg:gap-8 lg:pb-10'>
                             <ProjectsCard

@@ -15,10 +15,10 @@ const DViewCard = ({ title, className, image, name, lenguages }) => {
       initial={{ x: -200 }}
       whileInView={{ x: 0, transition: { duration: 0.5, ease: 'easeInOut' } }}
       viewport={{ once: true }}
-      className={`text-gris text-center flex flex-col items-center justify-between px-3 gap-3 pb-8 w-full bg-light bg-opacity-40 p-2 rounded-2xl md:pb-10 md:px-5 lg:gap-2 hover:opacity-60 trasition duration-300 shadow-xl shadow-gris ${className}`}>
+      className={`text-center flex flex-col items-center justify-between p-4 mb-8 w-full bg-white bg-opacity-40 rounded-2xl md:mb-4 md:pb-8 md:p-5 md:mt-3 lg:gap-2 lg:mb-3 lg:pt-4 hover:opacity-60 trasition duration-300 shadow-xl shadow-gris dark:shadow-green-400 dark:text-light dark:bg-opacity-20 ${className}`}>
       <Link href='/projects'>
-        <h2 className='text-oscuro text-2xl pb-2 md:text-3xl lg:text-4xl'>{title}</h2>
-        <Image src={image} alt={name} className='w-full h-96 object-scale-down pt-3 lg:pb-4' />
+        <h2 className='text-oscuro text-2xl md:text-3xl lg:text-4xl'>{title}</h2>
+        <Image src={image} alt={name} className='w-full h-96 object-scale-down' priority />
       </Link>
       <p className='text-oscuro font-semibold text-xs md:text-base'>{lenguages}</p>
     </motion.article>
@@ -28,7 +28,7 @@ const DViewCard = ({ title, className, image, name, lenguages }) => {
 const ProjectsView = () => {
   return (
     <div className='flex flex-col lg:gap-12 justify-between w-full'>
-      <div className='grid justify-between items-center md:grid-cols-2 lg:pt-10 lg:grid-cols-3 lg:gap-6'>
+      <div className='grid justify-between items-center md:grid-cols-2 md:gap-4 lg:pt-10 lg:grid-cols-3 lg:gap-6'>
         <DViewCard title='Landing Page'
           lenguages='HTML | JavaScript | Tailwind' image={landing} name='landing-page' />
 
@@ -49,7 +49,7 @@ const ProjectsView = () => {
           lenguages='NextJS | Tailwind | React' image={noImage} name='mercadolibre-prueba' />
       </div>
       <Link
-        className='bg-light rounded-md text-center font-titles text-gris font-semibold text-base md:text-xl lg:text-3xl lg:p-3 uppercase bg-opacity-95 border-2 border-gris hover:text-light hover:bg-gris hover:translate-y-2 transition duration-300'
+        className='bg-light rounded-md text-center font-titles font-semibold text-base md:text-xl md:mt-8 lg:text-3xl lg:p-3 uppercase bg-opacity-95 border-2 border-gris hover:text-light hover:bg-gris hover:translate-y-2 transition duration-300 dark:bg-transparent dark:shadow-lg dark:shadow-green-400 dark:hover:bg-light dark:hover:shadow-none dark:hover:text-green-400'
         href='/projects' >More about projects</Link>
     </div>
   )
