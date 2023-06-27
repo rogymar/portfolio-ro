@@ -14,4 +14,4 @@ This app was built using Nextjs, React, Tailwind and in some animations FramerMo
 
         Some of the projects I have built on my own and from tutorials and/or courses.
 
-### 📎 This site contains Dark Mode, but it is still in settings, however you can use it in your navigation through the words by activating the button. 
+### 📎 This site contains Dark Mode, but it is still in settings, however you can use it in your navigation through the words by activating the button. Some images are still missing, but they will be visible soon.
