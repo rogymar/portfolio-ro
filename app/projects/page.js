@@ -3,20 +3,21 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 // Componentes
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Layout from "../components/Inicio";
 import AnimatedText from "../components/AnimatedText";
+import { ExternalLink } from "../components/Icons";
 
 // Images and Icons
-import github from '../../public/icons/github.svg';
+import githubLines from '../../public/icons/githublines.svg';
 import landing from '../../public/landing.jpeg';
 import datamovies from '../../public/datamovies.jpeg';
 import noImage from '../../public/image.png';
 import tetris from '../../public/tetris.jpeg';
-import { motion } from "framer-motion";
 
 const FramerImage = motion(Image);
 
@@ -29,19 +30,17 @@ const ProjectsCard = ({ link, title, description, lenguajes, img, name, demo }) 
                 <p className='font-semibold pb-4 text-xs lg:pb-3 lg:text-[13px]'>{lenguajes}</p>
                 <div className='w-full flex items-center justify-center gap-3 lg:gap-5'>
                     <Link href={link} target='_blank' className='hover:translate-y-2 hover:opacity-50 transition duration-300'>
-                        <Image src={github} alt='github-icon' className='w-9 h-9 lg:w-[45px] lg:[45px] dark:bg-darkLight dark:p-2 dark:rounded-xl' />
+                        <Image src={githubLines} alt='github-icon' className='w-9 h-9 lg:w-[45px] lg:[45px] dark:bg-green-400 dark:p-2 dark:rounded-xl' />
                     </Link>
-                    <Link href={demo} target='_blank' className='flex gap-2 items-center justify-between bg-gris text-light font-semibold p-2 rounded-xl hover:bg-gradient-to-br from-violeta to-azulito hover:text-gris hover:translate-y-2  hover:opacity-80 transition duration-300 dark:bg-darkLight dark:hover:bg-green-400 dark:text-gris'>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 lg:w-6 lg:h-6">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
-                        </svg>
+                    <Link href={demo} target='_blank' className='flex gap-2 items-center justify-between bg-violeta font-semibold p-2 rounded-xl hover:bg-azulito hover:text-white hover:translate-y-2  hover:opacity-80 transition duration-300 dark:bg-darkLight dark:hover:bg-green-400 dark:text-gris'>
+                        <ExternalLink />
                         <p className='text-sm lg:text-base'>View Demo</p>
                     </Link>
                 </div>
             </div>
-            <Link href={demo} target='_blank' className='cursor-pointer p-5 w-full lg:p-3 rounded-2xl lg:w-1/2 transition duration-200 ease-in-out hover:bg-gradient-to-t from-violeta to-azulito'>
+            <Link href={demo} target='_blank' className='cursor-pointer p-5 w-full lg:p-3 rounded-2xl lg:w-1/2'>
                 <FramerImage 
-                whileHover={{scale:1.05}}
+                whileHover={{scale:1.10}}
                 transition={{duration:0.2}}
                 src={img} alt={name} className='w-full h-auto lg:h-96 lg:object-scale-down' />
             </Link>

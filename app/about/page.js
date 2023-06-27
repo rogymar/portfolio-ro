@@ -115,7 +115,7 @@ const about = () => {
                         <section className='w-full flex px-10 pb-10 md:px-14 lg:px-20 lg:gap-8 items-center justify-center'>
                             <h2 className='text-azulito text-3xl md:text-4xl lg:text-5xl dark:text-light'>Hobbies</h2>
                             <div className='grid grid-cols-2 gap-4 pl-10 items-center justify-between text-center md:flex'>
-                                <Link href='https://www.wattpad.com/user/ChiDsou' >
+                                <Link href='https://www.wattpad.com/user/ChiDsou' target='_blank'>
                                     <Image src={wattpad} alt='wattpad-icon' className='h-8 w-8 md:h-16 md:w-[70px] lg:w-20 lg:h-[70px] self-center' />
                                     <p className='text-xs md:text-base font-semibold'>Escritura</p>
                                 </Link>

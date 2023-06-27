@@ -18,8 +18,7 @@ import ProjectsView from './components/ProjectsView';
 
 // Images
 import profile from '../public/rogy.png';
-import linkedin from '../public/icons/link-circle.svg';
-import github from '../public/icons/github-circle.svg';
+import { GitHubIconLink, LinkedinIconLink } from './components/Icons';
 
 export default function Home() {
   return (
@@ -43,19 +42,9 @@ export default function Home() {
               href='/about'>
               <Image src={profile}  alt='Rogy-profile-pick' className='md:w-full md:h-auto rounded-full shadow-xl shadow-gris hover:opacity-80 dark:shadow-green-400' priority/></motion.a>
           </div>
-          <div className='md:col-span-1 md:flex-col flex justify-around'>
-            <motion.a href='https://github.com/rogymar' target='_blank'
-              whileHover={{ y: -3 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <Image src={github} alt="icon-github" className='w-10 h-10 md:w-12 md:h-12 md:py-1' />
-            </motion.a>
-            <motion.a href='https://www.linkedin.com/in/rogymarchirinosfront/' target='_blank'
-              whileHover={{ y: -3 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <Image src={linkedin} alt="icon-linkedin" className='w-10 h-10 md:w-12 md:h-12 md:py-1' />
-            </motion.a>
+          <div className='md:col-span-1 md:flex-col flex justify-around gap-3'>
+            <GitHubIconLink />
+            <LinkedinIconLink />
           </div>
         </section>
         <section className='bg-azulito w-full py-8 px-10 md:py-12 md:px-14 lg:py-16 lg:px-20 dark:bg-dark'>

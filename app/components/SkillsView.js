@@ -19,7 +19,7 @@ import nextLogo from '../../public/icons/next-light.svg';
 const SViewsCard = ({ name, className, icon, iconName, }) => {
     return (
         <motion.article
-            initial={{ x: -200 }}
+            initial={{ x: -100 }}
             whileInView={{ x: 0, transition: { duration: 0.5, ease: 'easeInOut' } }}
             viewport={{ once: true }}
             className={`w-ful flex flex-col items-center justify-center gap-2 w-full pb-5 md:pb-8 md:px-5 lg:gap-1 ${className}`}>
