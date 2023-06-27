@@ -39,10 +39,10 @@ const ProjectsCard = ({ link, title, description, lenguajes, img, name, demo }) 
                 </div>
             </div>
             <Link href={demo} target='_blank' className='cursor-pointer p-5 w-full lg:p-3 rounded-2xl lg:w-1/2'>
-                <FramerImage 
-                whileHover={{scale:1.10}}
-                transition={{duration:0.2}}
-                src={img} alt={name} className='w-full h-auto lg:h-96 lg:object-scale-down' />
+                <FramerImage
+                    whileHover={{ scale: 1.10 }}
+                    transition={{ duration: 0.2 }}
+                    src={img} alt={name} className='w-full h-auto lg:h-96 lg:object-scale-down' />
             </Link>
         </article >
     )
@@ -65,7 +65,7 @@ const projects = () => {
                         </article>
                         <section className='w-full flex flex-col items-center gap-3 pb-6 lg:grid lg:grid-cols-2 lg:gap-8 lg:pb-10'>
                             <ProjectsCard
-                                link='https://github.com/rogymar/datamovies' demo='https://datamovies-by-rog.netlify.app/' title='Datamovies'description='Aplicación que funciona como un buscador de pelís de las que se podrán obtener: titulo, extracto, coste de producción, elenco y productores.  Consume los datos de la API de The Movie Data Base. Si tienes cuenta en esa plataforma, puedes hacer login en mi aplicación para valorar las pelis, el login se eliminará una vez refresque la página.' lenguajes='React | Styled-components' img={datamovies} name='datamovies-project-img'
+                                link='https://github.com/rogymar/datamovies' demo='https://datamovies-by-rog.netlify.app/' title='Datamovies' description='Aplicación que funciona como un buscador de pelís de las que se podrán obtener: titulo, extracto, coste de producción, elenco y productores.  Consume los datos de la API de The Movie Data Base. Si tienes cuenta en esa plataforma, puedes hacer login en mi aplicación para valorar las pelis, el login se eliminará una vez refresque la página.' lenguajes='React | Styled-components' img={datamovies} name='datamovies-project-img'
                             />
 
                             <ProjectsCard
@@ -91,8 +91,12 @@ const projects = () => {
                                 link='' demo='' title='MercadoLibre Prueba' description='Recreación de las vistas principales de mercadolibre: Búsqueda, Lista de Resultados y Detalles del producto.' lenguajes='NextJS | Tailwind | React' img={noImage} name='mercadolibre-prueba-img'
                             />
                         </section>
-                        <section className='lg:mt-5 lg:mb-10 lg:text-2xl'>
-                            <p>También es parte de mis proyectos, este portfolio que estás visualizando ahora 😊</p>
+                        <section className='w-full lg:mt-5 lg:mb-10 lg:text-2xl flex flex-col items-center justify-between gap-1'>
+                            <p>También es parte de mis proyectos, este portfolio que estás visualizando ahora 😊 Puedes visualizar el código en: </p>
+
+                            <Link href='https://github.com/rogymar/portfolio-ro' target='_blank' className='w-auto justify-center items-center bg-violeta p-2 my-2 rounded-2xl hover:bg-gris'>
+                                    <Image src={githubLines} alt='github-icon' className='w-8 h-8 lg:w-[45px] lg:[45px] dark:bg-green-400 dark:p-2 dark:rounded-xl' />
+                                </Link>
                         </section>
                     </section>
                 </Layout>
