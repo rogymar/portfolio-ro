@@ -34,23 +34,27 @@ const ProjectsView = () => {
 
         <DViewCard
           title='DataMovie'
-          lenguages='React | Styled-components' image={datamovies1} name='data-movies-fetch' />
+          lenguages='React | styled-components' image={datamovies1} name='data-movies-fetch' />
 
         <DViewCard title='Tetris Game'
-          lenguages='TypeScript | Styled-Components' image={tetris1} name='tetris-game' />
+          lenguages='TypeScript | styled-components' image={tetris1} name='tetris-game' />
 
-        <DViewCard title='Todo-App'
+        <DViewCard
+          className='hidden'
+          title='Todo-App'
           lenguages='React | Tailwind | NextJS' image={noImage} name='to-do-app' />
 
         <DViewCard title='Tik Tak Toe Game'
-          lenguages='React | Css-In-JS' image={noImage} name='tik-tak-toe-game' />
+          className='hidden'
+          lenguages='React | CSS-in-JS' image={noImage} name='tik-tak-toe-game' />
 
         <DViewCard title='MercadoLibre Prueba'
+          className='hidden'
           lenguages='NextJS | Tailwind | React' image={noImage} name='mercadolibre-prueba' />
       </div>
       <Link
         className='bg-light rounded-md text-center font-titles font-semibold text-base md:text-xl md:mt-8 lg:text-3xl lg:p-3 uppercase bg-opacity-95 border-2 border-gris hover:text-light hover:bg-gris hover:translate-y-2 transition duration-300 dark:bg-transparent dark:border-none dark:shadow-lg dark:shadow-green-400 dark:hover:bg-light dark:hover:shadow-none dark:hover:text-green-400'
-        href='/projects' >More about projects</Link>
+        href='/projects' > Ver más sobre Proyectos</Link>
     </div>
   )
 }

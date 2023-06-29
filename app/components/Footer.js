@@ -10,7 +10,7 @@ const Footer = () => {
                 <span>{new Date().getFullYear()} &copy; All Rights Reserved</span>
                 <div className='flex items-center'>
                     <span className='px-1'>Made with 💜 by </span>
-                    <CustomLink href='/'>RogyChirinos</CustomLink>
+                    <CustomLink href='https://github.com/rogymar'>RogyChirinos</CustomLink>
                 </div>
             </Layout>
         </footer>

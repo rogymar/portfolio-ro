@@ -12,7 +12,7 @@ const animated = {
         opacity:1,
         transition:{
             delay:0.2,
-            staggerChildren: 0.05,
+            staggerChildren: 0.01,
         }
     }
 }
@@ -26,7 +26,7 @@ const singleWord = {
         opacity:1,
         y:0,
         transition:{
-            duration:1,
+            duration:0.5,
         }
     }
 }

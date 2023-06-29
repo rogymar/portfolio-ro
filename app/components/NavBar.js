@@ -75,21 +75,21 @@ const NavBar = () => {
                 <motion.div 
                 initial={{scale:0, opacity:0, x:10, y:8}}
                 animate={{scale:1, opacity:1}}
-                className='min-w-[70vw] lg:hidden items-center fixed top-[90px] left-[40px] rounded-2xl dark:bg-light p-8 bg-gray-200 backdrop-blur-lg'>
+                className='min-w-[70vw] lg:hidden items-center fixed top-[80px] left-[40px] rounded-2xl dark:bg-light p-8 bg-gray-200 backdrop-blur-lg'>
                 <nav className='flex items-center justify-center gap-5 flex-col dark:text-gris text-xl md:text-3xl md:gap-8'>
                     <CustomMobileRedirect href='/' text='Home' toggle={handleClik}>
                         <HomeIcon />
                     </CustomMobileRedirect>
 
-                    <CustomMobileRedirect href='/about' text='About' toggle={handleClik}>
+                    <CustomMobileRedirect href='/about' text='Acerca de...' toggle={handleClik}>
                         <AboutIcon />
                     </CustomMobileRedirect>
 
-                    <CustomMobileRedirect href='/skills' text='Skills' toggle={handleClik}>
+                    <CustomMobileRedirect href='/skills' text='Habilidades' toggle={handleClik}>
                         <SkillsIcon />
                     </CustomMobileRedirect>
 
-                    <CustomMobileRedirect href='/projects' text='Projects' toggle={handleClik}>
+                    <CustomMobileRedirect href='/projects' text='Proyectos' toggle={handleClik}>
                         <ProjectsIcon />
                     </CustomMobileRedirect>
 
@@ -111,15 +111,15 @@ const NavBar = () => {
                         <HomeIcon />
                     </CustomLink>
                     <span> | </span>
-                    <CustomLink href='/about' className='lg:mx-4' text='About'>
+                    <CustomLink href='/about' className='lg:mx-4' text='Sobre mí'>
                         <AboutIcon />
                     </CustomLink>
                     <span> | </span>
-                    <CustomLink href='/skills' className='lg:mx-4' text='Skills'>
+                    <CustomLink href='/skills' className='lg:mx-4' text='Habilidades'>
                         <SkillsIcon />
                     </CustomLink>
                     <span> | </span>
-                    <CustomLink href='/projects' className='lg:mx-4' text='Projects'>
+                    <CustomLink href='/projects' className='lg:mx-4' text='Proyectos'>
                         <ProjectsIcon />
                     </CustomLink>
                 </nav>

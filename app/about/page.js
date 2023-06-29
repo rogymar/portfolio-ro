@@ -84,8 +84,8 @@ const about = () => {
                 <Layout>
                     <article className='w-full px-10 py-8 lg:pt-5 md:px-14 lg:px-20'>
                         <section className='flex flex-col items-center justify-center pb-5 md:gap-2 md:pb-10'>
-                            <AnimatedText className='text-[28px] pb-2 md:text-[40px] lg:pb-3 lg:text-[80px]' text='About&nbsp; Rogymar&nbsp; as&nbsp; a&nbsp; developer' />
-                            <h2 className='md:text-[35px] lg:text-6xl text-violeta text-xl dark:text-green-400'>We never stop learning!</h2>
+                            <AnimatedText className='text-[28px] pb-2 md:text-[40px] lg:pb-3 lg:text-[80px]' text='Acerca&nbsp; de&nbsp; Rogymar' />
+                            <h2 className='md:text-[35px] lg:text-6xl text-violeta text-xl dark:text-green-400'>Nunca dejamos de aprender!</h2>
                         </section>
                         <section className='w-full flex flex-col items-center gap-3 pb-6 lg:grid lg:grid-cols-8 lg:gap-8 lg:pb-10 '>
                             <div className='flex flex-col items-center justify-center py-2 lg:col-span-3 lg:gap-3 lg:pb-0'>
@@ -97,18 +97,18 @@ const about = () => {
                                 <figcaption className='!text-oscuro font-semibold text-xs py-3 md:py-5 md:text-sm lg:py-0'>Esta foto personal fué mejorada con IA 🤫</figcaption>
                             </div>
                             <div className='gap-2 md:pb-3 lg:col-span-3 lg:gap-0 lg:pb-0'>
-                                <h2 className='text-azulito text-3xl md:text-4xl dark:text-light'>Biography</h2>
+                                <h2 className='text-azulito text-3xl md:text-4xl dark:text-light'>Biografía</h2>
                                 <CustomP text='🙋🏻‍♀️ Un saludo para ti, que estás leyendo. ' />
                                 <CustomP text='Me llamo Rogymar Chirinos, soy Frontend web developer, cuyo principal talento es: aprender lo más rápido posible. Fan de la creación digital. Busco aprender constantemente tanto del mundo del desarrollo como del artístico ya que son complementos indispensables para contribuir en este futuro digital.' />
                                 <CustomP text='Comencé a estudiar de forma autodidacta, viendo vídeos y haciendo cursos virtuales, con los cuales pude emprender el camino hacia el código. En estos laboriosos 4 - 5, meses he recibido apoyo de desarrolladores más experimentados, gracias a ellos pude nutrir mi información.' />
                                 <CustomP text='Pienso que la tecnología contribuye positivamente en la evolución de la humanidad, por tal razón es tan diversa y compleja, así como el desarrollo web, que es más que meramente contruir cosas bonitas: se trata siempre de encontrar las mejores soluciones a uno o varios problemas.' />
                             </div>
                             <div className='grid grid-cols-3 gap-2 lg:col-span-2 lg:flex lg:flex-col items-center justify-center py-2 md:py-10 lg:py-0'>
-                                <CustomResum value={10} premise='Personal Projects | Practices' />
-                                <CustomResum value={10} premise='Languages | Frameworks | Libraries' />
+                                <CustomResum value={10} premise='Proyectos personales | Prácticas' />
+                                <CustomResum value={10} premise='Lenguajes | Frameworks | Librerías' />
                                 <div className='text-center'>
                                     <p className='text-violeta  font-titles text-4xl md:text-5xl lg:text-8xl dark:text-green-400'>Feb</p>
-                                    <h3 className='font-texts text-xs md:text-base font-semibold lg:text-xl'>Start of learning, formally | 2023</h3>
+                                    <h3 className='font-texts text-xs md:text-base font-semibold lg:text-xl'>Inicio formal de los estudios | 2023</h3>
                                 </div>
                             </div>
                         </section>

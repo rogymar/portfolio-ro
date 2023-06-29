@@ -21,9 +21,9 @@ import tetris from '../../public/tetris.jpeg';
 
 const FramerImage = motion(Image);
 
-const ProjectsCard = ({ link, title, description, lenguajes, img, name, demo }) => {
+const ProjectsCard = ({ link, title, description, lenguajes, img, name, demo, className }) => {
     return (
-        <article className='w-full flex flex-col  items-center justify-center text-center p-8 mb-3 rounded-2xl bg-white shadow-lg shadow-gris md:p-12 lg:flex-wrap lg:p-10 lg:gap-6 lg:h-[450px] lg:text-right dark:bg-transparent dark:shadow-green-400 dark:shadow-xl dark:text-light dark:bg-white dark:bg-opacity-20'>
+        <article className={`w-full flex flex-col  items-center justify-center text-center p-8 mb-3 rounded-2xl bg-white shadow-lg shadow-gris md:p-12 lg:flex-wrap lg:p-10 lg:gap-6 lg:h-[450px] lg:text-right dark:bg-transparent dark:shadow-green-400 dark:shadow-xl dark:text-light dark:bg-white dark:bg-opacity-20 ${className}`}>
             <div className='w-full flex flex-col items-center py-3 gap-3 justify-between lg:items-end lg:object-contain lg:w-1/2'>
                 <h2 className='text-3xl lg:text-5xl'>{title}</h2>
                 <p className='text-sm md:text-sm lg:text-[15px]'>{description}</p>
@@ -60,8 +60,8 @@ const projects = () => {
                 <Layout>
                     <section className='w-full px-10 py-8 lg:pt-5 md:px-14 lg:px-20'>
                         <article className='flex flex-col items-center justify-center pb-5 md:gap-2 md:pb-10'>
-                            <AnimatedText className='text-[25px] pb-2 md:text-[40px] lg:pb-3 lg:text-[80px]' text='Development&nbsp; Projects&nbsp; To&nbsp; Date' />
-                            <h2 className='text-2xl md:text-[35px] lg:text-6xl text-violeta dark:text-green-400'>Some of my work!</h2>
+                            <AnimatedText className='text-[23px] pb-2 md:text-[40px] lg:pb-3 lg:text-[80px]' text='Proyectos&nbsp; De&nbsp; Desarollo' />
+                            <h2 className='text-2xl md:text-[35px] lg:text-6xl text-violeta dark:text-green-400'>Algo de mi trabajo!</h2>
                         </article>
                         <section className='w-full flex flex-col items-center gap-3 pb-6 lg:grid lg:grid-cols-2 lg:gap-8 lg:pb-10'>
                             <ProjectsCard
@@ -69,8 +69,10 @@ const projects = () => {
                             />
 
                             <ProjectsCard
-                                link='https://github.com/rogymar/nextjs-todo-app' demo='' title='ToDo App' description='Aplicación sencilla pero funcional para crear, buscar y eliminar TO-DO. Fué creada con Next, React y estilada con Tailwind. Asimismo, se encuentra alojada en Vercel.' lenguajes='React | Tailwind | NextJS' img={noImage} name='to-do-app-img'
+                                link='https://github.com/rogymar/tetris' demo='https://tetris-ro-by-weibenfalk.netlify.app/' title='Tetris Game' description='Juego de Tetris funcional elaborado con Typescript con ayuda de un tutorial de Weibenfalk. En la aplicación se puede mover y girar las piezas, así como acelerar su bajada manualmente con las flechas. La bajada de las piezas aumentará de velocidad una vez se incremente de nivel agregando puntos al eliminar las filas.' lenguajes='TypeScript | Styled-Components' img={tetris} name='tetris-game-img'
                             />
+
+
                         </section>
                         <section className='w-full flex items-center gap-3 pb-6 lg:gap-8 lg:pb-10'>
                             <ProjectsCard
@@ -79,15 +81,18 @@ const projects = () => {
                         </section>
                         <section className='w-full flex flex-col items-center gap-3 pb-6 lg:grid lg:grid-cols-2 lg:gap-8 lg:pb-10'>
                             <ProjectsCard
+                                className='hidden'
                                 link='' demo='' title='Tik Tak Toe Game' description='Clásico juego de tik, tak, toe, como parte de la enseñanza inicial de React. Funciona para colocar X u O en las diversas casillas y que indique cuando alguno de los dos haya ganado o empatado, dentro de una interfaz agradable.' lenguajes='React | Css-In-JS' img={noImage} name='tik-tak-toe-game-img'
                             />
 
                             <ProjectsCard
-                                link='https://github.com/rogymar/tetris' demo='https://tetris-ro-by-weibenfalk.netlify.app/' title='Tetris Game' description='Juego de Tetris funcional elaborado con Typescript con ayuda de un tutorial de Weibenfalk. En la aplicación se puede mover y girar las piezas, así como acelerar su bajada manualmente con las flechas. La bajada de las piezas aumentará de velocidad una vez se incremente de nivel agregando puntos al eliminar las filas.' lenguajes='TypeScript | Styled-Components' img={tetris} name='tetris-game-img'
+                                className='hidden'
+                                link='https://github.com/rogymar/nextjs-todo-app' demo='' title='ToDo App' description='Aplicación sencilla pero funcional para crear, buscar y eliminar TO-DO. Fué creada con Next, React y estilada con Tailwind. Asimismo, se encuentra alojada en Vercel.' lenguajes='React | Tailwind | NextJS' img={noImage} name='to-do-app-img'
                             />
                         </section>
                         <section className='w-full flex items-center gap-3 pb-6 lg:gap-8 lg:pb-10'>
                             <ProjectsCard
+                                className='hidden'
                                 link='' demo='' title='MercadoLibre Prueba' description='Recreación de las vistas principales de mercadolibre: Búsqueda, Lista de Resultados y Detalles del producto.' lenguajes='NextJS | Tailwind | React' img={noImage} name='mercadolibre-prueba-img'
                             />
                         </section>
@@ -95,8 +100,8 @@ const projects = () => {
                             <p>También es parte de mis proyectos, este portfolio que estás visualizando ahora 😊 Puedes visualizar el código en: </p>
 
                             <Link href='https://github.com/rogymar/portfolio-ro' target='_blank' className='w-auto justify-center items-center bg-violeta p-2 my-2 rounded-2xl hover:bg-gris'>
-                                    <Image src={githubLines} alt='github-icon' className='w-8 h-8 lg:w-[45px] lg:[45px] dark:bg-green-400 dark:p-2 dark:rounded-xl' />
-                                </Link>
+                                <Image src={githubLines} alt='github-icon' className='w-8 h-8 lg:w-[45px] lg:[45px] dark:bg-green-400 dark:p-2 dark:rounded-xl' />
+                            </Link>
                         </section>
                     </section>
                 </Layout>

@@ -52,8 +52,8 @@ const skills = () => {
                 <Layout>
                     <article className='w-full px-10 pt-8 lg:pt-5 md:px-14 lg:px-20'>
                         <section className='flex flex-col items-center justify-center pb-5 md:gap-2 md:pb-10'>
-                            <AnimatedText className='text-[28px] pb-2 md:text-[40px] lg:pb-3 lg:text-[80px]' text='Skills&nbsp; And&nbsp; Tools&nbsp;' />
-                            <h2 className='md:text-[35px] lg:text-6xl text-violeta text-xl dark:text-green-400'>Tools make it all easier!</h2>
+                            <AnimatedText className='text-[20px] pb-2 md:text-[40px] lg:pb-3 lg:text-[80px]' text='Habilidades&nbsp; Y&nbsp; tecnología&nbsp;' />
+                            <h2 className='text-center lg:text-left md:text-[35px] lg:text-6xl text-violeta text-xl dark:text-green-400'>Las herramientas hacen todo más sencillo!</h2>
                         </section>
                         <section className='w-full lg:pt-6 pb-8'>
                             <ul>
@@ -70,8 +70,8 @@ const skills = () => {
                                 />
 
                                 <SkillsBox
-                                    tool='GitHub'
-                                    date='2023' fact='Al principio cuando vi por primera vez GitHub, ya conocía la consola, pero igual me parecía súper engorroso, sin embargo, empecé a entenderlo y dejar de verlo como todo un lío, sino como lo que es, una excelente opción para ordenar las versiones de tu código e incluso dejar mensajes que te ayuden a guiarte mejor por el mismo.' icon={iconGithub} name='gitHub-logo'
+                                    tool='GIT & GitHub'
+                                    date='2023' fact='Al principio cuando vi por primera vez Git y GitHub, ya conocía la consola, pero igual me parecía súper engorroso, sin embargo, empecé a entenderlo y dejar de verlo como todo un lío, sino como lo que es, una excelente opción para ordenar las versiones de tu código, dejar mensajes que te ayuden a guiarte mejor por el mismo, y compartirlo mediante la red de GitHub.' icon={iconGithub} name='gitHub-logo'
                                 />
 
                                 <SkillsBox
