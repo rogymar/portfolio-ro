@@ -1,4 +1,4 @@
-### 📝 Te presento mi ortfolio.
+### 📝 Te presento mi Portfolio.
 
 Esta app fue construida con Nextjs, React, Tailwind y para lograr algunos efectos se utilizó FramerMotion.
 
