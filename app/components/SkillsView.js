@@ -78,7 +78,7 @@ const SkillsView = () => {
             </div>
             <Link
                 className='bg-light rounded-md text-center font-titles font-semibold text-base mt-5 md:mt-8 md:text-xl lg:mt-6 lg:text-3xl lg:p-3 bg-opacity-95 border-2 border-gris hover:text-light hover:bg-gris hover:translate-y-2 transition duration-300 dark:border-none dark:bg-transparent dark:shadow-lg dark:shadow-green-400 dark:hover:bg-light dark:hover:shadow-none dark:hover:text-green-400'
-                href='/skills' >Ver más acerca de las Habilidades</Link>
+                href='/skills' >Más sobre mis Habilidades</Link>
         </div >
 
     )

@@ -75,8 +75,8 @@ const NavBar = () => {
                 <motion.div 
                 initial={{scale:0, opacity:0, x:10, y:8}}
                 animate={{scale:1, opacity:1}}
-                className='min-w-[70vw] lg:hidden items-center fixed top-[80px] left-[40px] rounded-2xl dark:bg-light p-8 bg-gray-200 backdrop-blur-lg'>
-                <nav className='flex items-center justify-center gap-5 flex-col dark:text-gris text-xl md:text-3xl md:gap-8'>
+                className='min-w-[70vw] lg:hidden items-center fixed top-[80px] left-[40px] rounded-2xl dark:bg-dark p-8 bg-gray-200 backdrop-blur-lg'>
+                <nav className='flex items-start justify-center gap-5 flex-col dark:text-light text-xl md:text-3xl md:gap-8'>
                     <CustomMobileRedirect href='/' text='Home' toggle={handleClik}>
                         <HomeIcon />
                     </CustomMobileRedirect>

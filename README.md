@@ -1,17 +1,16 @@
-### 📝 Welcome to my portfolio.
+### 📝 Te presento mi ortfolio.
 
-This app was built using Nextjs, React, Tailwind and in some animations FramerMotion was used.
+Esta app fue construida con Nextjs, React, Tailwind y para lograr algunos efectos se utilizó FramerMotion.
 
-### 🤔 What will you find?
+### 🤔 ¿Qué puedes encontrar?
 
-   🙋🏻‍♀️ About the author (Me).
-        A short biography about my immersion in the development world (it has some nice animations).
+  ### 🙋🏻‍♀️ A C E R C A    D E L    A U T O R  (Yo).
+        Una pequeña biografía sobre mi introducción al mundo del desarrollo. Y unas simpáticas animaciones.
     
-    📚 Skills and Tools.
-        Some of the tools I have been learning to use and comments on learning.
+  ### 📚 H A B I L I D A D E S    Y    T E C N O L O G Í A.
+        Algunas de las herramientas y tecnología que conozco hasta el momento, junto a algunos comentarios sobre el proceso de aprendizaje.
 
-    💼 Projects.
+  ###   💼 P R O Y E C T O S    D E    D E S A R O L L O.
+        Varios de mis proyectos, construidos a lo largo de mi aprendizaje hasta el momento.
 
-        Some of the projects I have built on my own and from tutorials and/or courses.
-
-### 📎 This site contains Dark Mode, but it is still in settings, however you can use it in your navigation through the words by activating the button. Some images are still missing, but they will be visible soon.
+### 📎 Este sitio contiene ModoOscuro por lo que puedes activarlo en el botón que muestra una luna y volver al Modo Claro con el botón que contiene un sol.

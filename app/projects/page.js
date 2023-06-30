@@ -99,8 +99,8 @@ const projects = () => {
                         <section className='w-full lg:mt-5 lg:mb-10 lg:text-2xl flex flex-col items-center justify-between gap-1'>
                             <p>También es parte de mis proyectos, este portfolio que estás visualizando ahora 😊 Puedes visualizar el código en: </p>
 
-                            <Link href='https://github.com/rogymar/portfolio-ro' target='_blank' className='w-auto justify-center items-center bg-violeta p-2 my-2 rounded-2xl hover:bg-gris'>
-                                <Image src={githubLines} alt='github-icon' className='w-8 h-8 lg:w-[45px] lg:[45px] dark:bg-green-400 dark:p-2 dark:rounded-xl' />
+                            <Link href='https://github.com/rogymar/portfolio-ro' target='_blank' className='w-auto justify-center items-center bg-violeta p-2 my-2 rounded-2xl hover:bg-gris dark:hover:bg-darkLight dark:bg-green-400 dark:p-2 dark:rounded-xl'>
+                                <Image src={githubLines} alt='github-icon' className='w-8 h-8 lg:w-[45px] lg:[45px]' />
                             </Link>
                         </section>
                     </section>

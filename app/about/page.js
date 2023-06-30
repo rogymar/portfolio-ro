@@ -85,7 +85,7 @@ const about = () => {
                     <article className='w-full px-10 py-8 lg:pt-5 md:px-14 lg:px-20'>
                         <section className='flex flex-col items-center justify-center pb-5 md:gap-2 md:pb-10'>
                             <AnimatedText className='text-[28px] pb-2 md:text-[40px] lg:pb-3 lg:text-[80px]' text='Acerca&nbsp; de&nbsp; Rogymar' />
-                            <h2 className='md:text-[35px] lg:text-6xl text-violeta text-xl dark:text-green-400'>Nunca dejamos de aprender!</h2>
+                            <h2 className='md:text-[35px] lg:text-6xl text-violeta text-xl dark:text-green-400'>Nunca dejo de aprender!</h2>
                         </section>
                         <section className='w-full flex flex-col items-center gap-3 pb-6 lg:grid lg:grid-cols-8 lg:gap-8 lg:pb-10 '>
                             <div className='flex flex-col items-center justify-center py-2 lg:col-span-3 lg:gap-3 lg:pb-0'>

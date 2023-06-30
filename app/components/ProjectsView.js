@@ -54,7 +54,7 @@ const ProjectsView = () => {
       </div>
       <Link
         className='bg-light rounded-md text-center font-titles font-semibold text-base md:text-xl md:mt-8 lg:text-3xl lg:p-3 uppercase bg-opacity-95 border-2 border-gris hover:text-light hover:bg-gris hover:translate-y-2 transition duration-300 dark:bg-transparent dark:border-none dark:shadow-lg dark:shadow-green-400 dark:hover:bg-light dark:hover:shadow-none dark:hover:text-green-400'
-        href='/projects' > Ver más sobre Proyectos</Link>
+        href='/projects' > Más sobre mis Proyectos</Link>
     </div>
   )
 }

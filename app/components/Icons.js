@@ -101,7 +101,7 @@ export const GitHubIconLink = () => {
 
 export const GithubIcon = () => {
     return (
-        <Link href='https://github.com/rogymar?tab=repositories' target='_blank'>
+        <Link href='https://github.com/rogymar?tab=repositories' target='_blank' className='dark:bg-green-400 dark:rounded-full dark:p-3'>
             <Image src={gitHub} alt='github-lines-icon' className='w-10 h-10' />
         </Link>
     )
@@ -121,7 +121,7 @@ export const LinkedinIconLink = () => {
 
 export const LinkedinIcon = () => {
     return (
-        <Link href='https://www.linkedin.com/in/rogymarchirinosfront/' target='_blank'>
+        <Link href='https://www.linkedin.com/in/rogymarchirinosfront/' target='_blank' className='dark:bg-green-400 dark:rounded-full dark:p-3'>
         <Image src={linkLines} alt='liknedin-lines-icon' className='w-10 h-10' />
     </Link>
     )

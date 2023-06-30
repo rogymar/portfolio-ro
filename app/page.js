@@ -33,6 +33,7 @@ export default function Home() {
             <p className='text-sm pt-3.5 md:pt-3 lg:text-right lg:text-xl lg:pt-4'>
               En busca de retos que me permitan crecer, expandir mis conocimientos y contribuir con la búsqueda de soluciones orientadas al futuro.
             </p>
+            <RotatingText />
           </div>
           <div className='md:col-span-2 lg:col-span-3 relative rounded-full'>
             <motion.a
@@ -52,8 +53,8 @@ export default function Home() {
           <ProjectsView />
         </section>
         <div className='w-full py-8 px-10 text-right flex flex-row-reverse items-center justify-between gap-2 md:py-12 md:px-14 lg:py-16 lg:px-20 lg:gap-5'>
-          <h2 className='w-1/2 text-4xl md:text-5xl lg:text-9xl dark:text-green-400'>Conozca más...</h2>
-          <p className='w-1/2 text-sm md:text-xl lg:text-3xl'>Visita la página de skills, encontrarás un poco del proceso de estudio. También, visita la página de proyectos, allí encontrarás enlaces para ver los proyectos en código y en demo.</p>
+          <h2 className='w-1/2 text-4xl md:text-5xl lg:text-9xl dark:text-green-400 '>Conozca más...</h2>
+          <p className='w-1/2 text-sm md:text-xl lg:text-3xl'>Visita la página de <a href='/skills' className='text-violeta dark:text-green-400 font-bold'>Habilidades y tecnologías</a>, encontrarás un poco del proceso de estudio. También, visita la página de <a href='/projects' className='text-violeta dark:text-green-400 font-bold'>Proyectos</a>, allí encontrarás enlaces para ver los proyectos en código y en demo.</p>
         </div>
         <section className='bg-violeta w-full py-8 px-10 md:py-12 md:px-14 lg:py-16 lg:px-20 dark:bg-dark'>
           <h2 className='text-4xl pb-6 md:text-5xl lg:text-9xl lg:pb-0'>Herramientas</h2>
@@ -64,7 +65,6 @@ export default function Home() {
           <p className='w-1/2 text-sm md:text-xl lg:text-[28px]'>Todo en la vida es un proceso de aprendizaje constante. Así que nunca pares de aprender, siempre hay cosas nuevas aguardándote. (❁´◡`❁)</p>
         </div>
       </Layout>
-      <RotatingText />
       <Footer />
     </main>
   )
