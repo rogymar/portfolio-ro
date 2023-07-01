@@ -15,6 +15,7 @@ import responsiveDesing from '../../public/icons/responsive-mincolor.svg';
 import tailLogo from '../../public/icons/tailwind-color.svg';
 import tsLogo from '../../public/icons/ts-color.svg';
 import nextLogo from '../../public/icons/next-light.svg';
+import scrum from '../../public/icons/scrum.svg';
 
 const SViewsCard = ({ name, className, icon, iconName, }) => {
     return (
@@ -51,6 +52,12 @@ const SkillsView = () => {
                     name='TailwindCSS'
                     icon={tailLogo}
                     iconName='tailwind-logo' />
+
+                <SViewsCard
+                    className='gap-2'
+                    name='Scrum'
+                    icon={scrum}
+                    iconName='scrum-icon' />
 
                 <SViewsCard
                     name='TypeScript'

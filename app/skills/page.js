@@ -21,6 +21,7 @@ import cssLogo from '../../public/icons/css-color.svg';
 import tailLogo from '../../public/icons/tailwind-color.svg';
 import tsLogo from '../../public/icons/ts-color.svg';
 import nextLogo from '../../public/icons/next-light.svg';
+import scrumicon from '../../public/icons/scrum.svg';
 
 const SkillsBox = ({ tool, fact, date, icon, name }) => {
     return (
@@ -88,7 +89,11 @@ const skills = () => {
 
 
                                 <SkillsBox
-                                    tool='TailwindCss' date='2023' fact='Casi de la mano con TypeScript y NextJs, ya que me encontraba conociendolos a través de la construcción de una aplicación mientras me encontraba haciendo un curso online. 😄' icon={tailLogo} name='tailwind-logo'
+                                    tool='TailwindCSS' date='2023' fact='Casi de la mano con TypeScript y NextJs, ya que me encontraba conociendolos a través de la construcción de una aplicación mientras me encontraba haciendo un curso online. 😄' icon={tailLogo} name='tailwind-logo'
+                                />
+
+                                <SkillsBox
+                                    tool='Scrum' date='2023' fact='Aprender cómo se conforman los roles dentro de la organización del trabajo permite que se pueda obtener un mejor y satisfactorio resultado al elaborar mis tareas en el ámbito laboral. 🤓' icon={scrumicon} name='scrum-img-reference'
                                 />
                             </ul>
                         </section>
