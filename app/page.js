@@ -27,7 +27,7 @@ export default function Home() {
       <Layout>
         <section className='w-full grid grid-cols-1 gap-10 items-center justify-center text-center md:grid-cols-6 lg:grid-cols-8 md:text-right py-8 px-10 md:py-12 md:px-14 lg:py-16 lg:px-20'>
           <div className='md:col-span-3 lg:col-span-4'>
-            <p className='pb-3.5 md:pb-4 lg:pb-5'>🙌🏼 Hola, soy</p>
+            <p className='pb-3.5 md:pb-4 lg:pb-5'>🙌🏼 Hola, soy Rogymar Chirinos</p>
             <AnimatedText text='Desarrolladora' className='text-violeta text-[30px] md:text-4xl md:text-right lg:text-7xl dark:text-green-400' />
             <AnimatedText text='Frontend' className='text-violeta text-[30px] md:text-4xl lg:text-7xl md:text-right dark:text-green-400' />
             <p className='text-sm pt-3.5 md:pt-3 lg:text-right lg:text-xl lg:pt-4'>
