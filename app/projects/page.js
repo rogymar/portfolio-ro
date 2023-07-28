@@ -18,6 +18,7 @@ import landing from '../../public/landing.jpeg';
 import datamovies from '../../public/datamovies.jpeg';
 import noImage from '../../public/image.png';
 import tetris from '../../public/tetris.jpeg';
+import taskManager from '../../public/task-manager.jpeg'
 
 const FramerImage = motion(Image);
 
@@ -65,7 +66,11 @@ const projects = () => {
                         </article>
                         <section className='w-full flex flex-col items-center gap-3 pb-6 lg:grid lg:grid-cols-2 lg:gap-8 lg:pb-10'>
                             <ProjectsCard
-                                link='https://github.com/rogymar/datamovies' demo='https://datamovies-by-rog.netlify.app/' title='Datamovies' description='Aplicación que funciona como un buscador de pelís de las que se podrán obtener: titulo, extracto, coste de producción, elenco y productores.  Consume los datos de la API de The Movie Data Base. Si tienes cuenta en esa plataforma, puedes hacer login en mi aplicación para valorar las pelis, el login se eliminará una vez refresque la página.' lenguajes='React | Styled-components' img={datamovies} name='datamovies-project-img'
+                                link='https://github.com/rogymar/todo-app' demo='https://todo-app-rogymar.vercel.app/' title='Task Manager' description='Aplicación sencilla, pero funcinal, que permite ordenar, marcar como completas y eliminar tareas o pendientes. Almacena los datos en tu LocalStorage. Visítala e interactúa en el Demo. Lo que ves en la imagen es la versión responsive para pantallas pequeñas.' lenguajes='NextJs | ReactJs | Tailwind' img={taskManager} name='taskManager-project-img'
+                            />
+
+                            <ProjectsCard
+                                link='https://github.com/rogymar/datamovies' demo='https://datamovies-by-rog.netlify.app/' title='Datamovies' description='Aplicación que funciona como un buscador de pelís de las que se podrán obtener: titulo, extracto, coste de producción, elenco y productores.  Consume los datos de la API de The Movie Data Base. Si tienes cuenta en esa plataforma, puedes hacer login en mi aplicación para valorar las pelis, el login se eliminará una vez refresque la página.' lenguajes='ReactJs | Styled-components' img={datamovies} name='datamovies-project-img'
                             />
 
                             <ProjectsCard

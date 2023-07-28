@@ -8,6 +8,7 @@ import landing from '../../public/landing.jpeg';
 import datamovies1 from '../../public/datamovies1.jpeg';
 import noImage from '../../public/image.png';
 import tetris1 from '../../public/tetris1.jpeg';
+import taskManager from '../../public/task-manager.jpeg';
 
 const DViewCard = ({ title, className, image, name, lenguages }) => {
   return (
@@ -39,10 +40,8 @@ const ProjectsView = () => {
         <DViewCard title='Tetris Game'
           lenguages='TypeScript | styled-components' image={tetris1} name='tetris-game' />
 
-        <DViewCard
-          className='hidden'
-          title='Todo-App'
-          lenguages='React | Tailwind | NextJS' image={noImage} name='to-do-app' />
+        <DViewCard title='Task Manager'
+          lenguages='React | Tailwind | NextJS' image={taskManager} name='to-do-app' />
 
         <DViewCard title='Tik Tak Toe Game'
           className='hidden'
